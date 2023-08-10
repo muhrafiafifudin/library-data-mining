@@ -25,3 +25,20 @@ Route::get('/', function () {
     }
     return view('pages.auth.login');
 });
+
+Route::group(['middleware' => 'auth'], function () {
+    // Dashboard
+    Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
+    // Naive Bayes
+    Route::group(['prefix' => 'pengujian-naive-bayes', 'as' => 'naive-bayes.'], function () {
+        //
+    });
+    // Training Data
+    Route::group(['prefix' => 'data-training', 'as' => 'training-data.'], function () {
+        //
+    });
+    // Test History
+    Route::group(['prefix' => 'riwayat-pengujian', 'as' => 'test-history.'], function () {
+        //
+    });
+});
