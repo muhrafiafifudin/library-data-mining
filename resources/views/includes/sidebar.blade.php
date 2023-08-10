@@ -65,7 +65,7 @@
                 <li class="nav-item">
                     <a href="#">
                         <i class="fa fa-history"></i>
-                        <p>History Pengujian</p>
+                        <p>Riwayat Pengujian</p>
                     </a>
                 </li>
             </ul>
