@@ -31,14 +31,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
     // Naive Bayes
     Route::group(['prefix' => 'pengujian-naive-bayes', 'as' => 'naive-bayes.'], function () {
-        //
+        Route::get('/', 'App\Http\Controllers\NaiveBayesController@index')->name('index');
     });
     // Training Data
     Route::group(['prefix' => 'data-training', 'as' => 'training-data.'], function () {
-        //
+        Route::get('/', 'App\Http\Controllers\TrainingDataController@index')->name('index');
     });
     // Test History
     Route::group(['prefix' => 'riwayat-pengujian', 'as' => 'test-history.'], function () {
-        //
+        Route::get('/', 'App\Http\Controllers\TestHistory@index')->name('index');
     });
 });
