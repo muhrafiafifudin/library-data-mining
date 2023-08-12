@@ -8,6 +8,6 @@ class NaiveBayesController extends Controller
 {
     public function index()
     {
-        //
+        return view('pages.naive_bayes.naive_bayes');
     }
 }

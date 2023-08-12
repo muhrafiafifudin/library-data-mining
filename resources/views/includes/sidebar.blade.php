@@ -51,13 +51,13 @@
                     <h4 class="text-section">Data Mining</h4>
                 </li>
                 <li class="nav-item">
-                    <a href="#">
+                    <a href="{{ route('naive-bayes.index') }}">
                         <i class="far fa-chart-bar"></i>
                         <p>Pengujian Naive Bayes</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">
+                    <a href="{{ route('training-data.index') }}">
                         <i class="fas fa-layer-group"></i>
                         <p>Data Training</p>
                     </a>
