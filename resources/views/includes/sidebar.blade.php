@@ -38,8 +38,8 @@
                 </div>
             </div>
             <ul class="nav">
-                <li class="nav-item active">
-                    <a href="index.html">
+                <li class="nav-item {{ request()->is('dashboard') ? 'active' : '' }}">
+                    <a href="{{ route('dashboard') }}">
                         <i class="fas fa-home"></i>
                         <p>Dashboard</p>
                     </a>
@@ -50,20 +50,20 @@
                     </span>
                     <h4 class="text-section">Data Mining</h4>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {{ request()->is('pengujian-naive-bayes') ? 'active' : '' }}">
                     <a href="{{ route('naive-bayes.index') }}">
                         <i class="far fa-chart-bar"></i>
                         <p>Pengujian Naive Bayes</p>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {{ request()->is('data-training') ? 'active' : '' }}">
                     <a href="{{ route('training-data.index') }}">
                         <i class="fas fa-layer-group"></i>
                         <p>Data Training</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#">
+                <li class="nav-item {{ request()->is('riwayat-pengujian') ? 'active' : '' }}">
+                    <a href="{{ route('test-history.index') }}">
                         <i class="fa fa-history"></i>
                         <p>Riwayat Pengujian</p>
                     </a>
