@@ -45,14 +45,61 @@
                                         <table id="ahp-weighting-table" class="display table table-striped table-hover" >
                                             <thead>
                                                 <tr>
-                                                    <th>Kriteria</th>
-                                                    <th>Nilai Perbandingan</th>
+                                                    <th>Atribut</th>
+                                                    <th>Nilai Atribut</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
+                                                    <td>Nama Siswa</td>
                                                     <td>
-                                                        <input type="number" step="any" class="form-control" placeholder="Masukkan Bobot" required>
+                                                        <select name="product_id" class="form-control">
+                                                            <option value="">Pilih Nama Siswa</option>
+
+                                                            @foreach ($names as $name)
+                                                                <option value="{{ $name }}">{{ $name }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Kelas Siswa</td>
+                                                    <td>
+                                                        <select name="product_id" class="form-control">
+                                                            <option value="">Pilih Kelas Siswa</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Kode Koleksi</td>
+                                                    <td>
+                                                        <select name="product_id" class="form-control">
+                                                            <option value="">Pilih Kode Koleksi</option>
+
+                                                            @foreach ($codes as $code)
+                                                                <option value="{{ $code }}">{{ $code }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Judul Buku</td>
+                                                    <td>
+                                                        <select name="product_id" class="form-control">
+                                                            <option value="">Pilih Judul Buku</option>
+
+                                                            @foreach ($titles as $title)
+                                                                <option value="{{ $title }}">{{ $title }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jenis Buku</td>
+                                                    <td>
+                                                        <select name="product_id" class="form-control">
+                                                            <option value="">Pilih Jenis Buku</option>
+                                                        </select>
                                                     </td>
                                                 </tr>
                                             </tbody>
