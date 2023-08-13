@@ -39,6 +39,6 @@ Route::group(['middleware' => 'auth'], function () {
     });
     // Test History
     Route::group(['prefix' => 'riwayat-pengujian', 'as' => 'test-history.'], function () {
-        Route::get('/', 'App\Http\Controllers\TestHistory@index')->name('index');
+        Route::get('/', 'App\Http\Controllers\TestHistoryController@index')->name('index');
     });
 });
