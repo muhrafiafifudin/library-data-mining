@@ -36,10 +36,10 @@
                             <div class="card-header">
                                 <div class="d-flex align-items-center">
                                     <h4 class="card-title">Data Training</h4>
-                                    <button class="btn btn-secondary btn-round ml-auto" data-toggle="modal" data-target="#addProduct">
+                                    {{-- <button class="btn btn-secondary btn-round ml-auto" data-toggle="modal" data-target="#addProduct">
                                         <i class="fa fa-plus mr-2"></i>
                                         Tambah Data Training
-                                    </button>
+                                    </button> --}}
                                 </div>
 
                                 <div class="modal fade" id="addProduct" tabindex="-1" role="dialog" aria-hidden="true">
@@ -96,19 +96,34 @@
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table id="product-table" class="display table table-striped table-hover" >
+                                    <table id="training-data-table" class="display table table-striped table-hover" >
                                         <thead>
                                             <tr>
                                                 <th width="50px">No.</th>
-                                                <th>Variabel</th>
-                                                <th>Code</th>
-                                                <th>Produk</th>
-                                                <th>Harga Satuan</th>
-                                                <th>Kadaluarsa</th>
-                                                <th>Stok</th>
-                                                <th width="50px">Aksi</th>
+                                                <th>ID Anggota</th>
+                                                <th>Nama Anggota</th>
+                                                <th>Kode Koleksi</th>
+                                                <th>Judul</th>
+                                                <th>Tanggal Pinjam</th>
+                                                <th>Tanggal Kembali</th>
+                                                <th>Status</th>
                                             </tr>
                                         </thead>
+                                        <tbody>
+                                            @php $no = 1; @endphp
+                                            @foreach ($training_data as $training_data)
+                                                <tr>
+                                                    <td>{{ $no++ }}</td>
+                                                    <td>{{ $training_data->member }}</td>
+                                                    <td>{{ $training_data->name }}</td>
+                                                    <td>{{ $training_data->code }}</td>
+                                                    <td>{{ $training_data->title }}</td>
+                                                    <td>{{ \Carbon\Carbon::parse($training_data->start_date)->translatedFormat('j F Y') }}</td>
+                                                    <td>{{ \Carbon\Carbon::parse($training_data->end_date)->translatedFormat('j F Y') }}</td>
+                                                    <td>{{ $training_data->status }}</td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
@@ -119,3 +134,7 @@
         </div>
     </div>
 @endsection
+
+@push('javascript')
+    <script src="{{ asset('assets/js/pages/training_data.js') }}"></script>
+@endpush
