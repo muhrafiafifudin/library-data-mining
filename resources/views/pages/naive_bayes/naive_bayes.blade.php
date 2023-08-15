@@ -63,14 +63,6 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Kelas Siswa</td>
-                                                    <td>
-                                                        <select name="product_id" class="form-control">
-                                                            <option value="">Pilih Kelas Siswa</option>
-                                                        </select>
-                                                    </td>
-                                                </tr>
-                                                <tr>
                                                     <td>Kode Koleksi</td>
                                                     <td>
                                                         <select name="product_id" class="form-control">
@@ -94,19 +86,11 @@
                                                         </select>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td>Jenis Buku</td>
-                                                    <td>
-                                                        <select name="product_id" class="form-control">
-                                                            <option value="">Pilih Jenis Buku</option>
-                                                        </select>
-                                                    </td>
-                                                </tr>
                                             </tbody>
                                         </table>
 
                                         <div class="text-center mt-5">
-                                            <button type="submit" class="btn btn-secondary">Lakukan Pembobotan</button>
+                                            <button type="submit" class="btn btn-secondary">Lakukan Pengujian</button>
                                         </div>
                                     </form>
                                 </div>
