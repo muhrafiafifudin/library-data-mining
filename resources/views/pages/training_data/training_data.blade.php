@@ -100,12 +100,11 @@
                                         <thead>
                                             <tr>
                                                 <th width="50px">No.</th>
-                                                <th>ID Anggota</th>
                                                 <th>Nama Anggota</th>
                                                 <th>Kode Koleksi</th>
                                                 <th>Judul</th>
-                                                <th>Tanggal Pinjam</th>
-                                                <th>Tanggal Kembali</th>
+                                                <th>Jenis Buku</th>
+                                                <th>Kelas</th>
                                                 <th>Status</th>
                                             </tr>
                                         </thead>
@@ -114,12 +113,11 @@
                                             @foreach ($training_data as $training_data)
                                                 <tr>
                                                     <td>{{ $no++ }}</td>
-                                                    <td>{{ $training_data->member }}</td>
                                                     <td>{{ $training_data->name }}</td>
                                                     <td>{{ $training_data->code }}</td>
                                                     <td>{{ $training_data->title }}</td>
-                                                    <td>{{ \Carbon\Carbon::parse($training_data->start_date)->translatedFormat('j F Y') }}</td>
-                                                    <td>{{ \Carbon\Carbon::parse($training_data->end_date)->translatedFormat('j F Y') }}</td>
+                                                    <td>{{ $training_data->type }}</td>
+                                                    <td>{{ $training_data->class }}</td>
                                                     <td>{{ $training_data->status }}</td>
                                                 </tr>
                                             @endforeach
