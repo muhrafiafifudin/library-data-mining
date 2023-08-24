@@ -12,7 +12,14 @@ class NaiveBayesController extends Controller
         $names = TrainingData::distinct()->pluck('name');
         $codes = TrainingData::distinct()->pluck('code');
         $titles = TrainingData::distinct()->pluck('title');
+        $types = TrainingData::distinct()->pluck('type');
+        $classes = TrainingData::distinct()->pluck('class');
 
-        return view('pages.naive_bayes.naive_bayes', compact('names', 'codes', 'titles'));
+        return view('pages.naive_bayes.naive_bayes', compact('names', 'codes', 'titles', 'types', 'classes'));
+    }
+
+    public function store(Request $request)
+    {
+        dd($request->all());
     }
 }

@@ -29,10 +29,6 @@ Route::get('/', function () {
 Route::group(['middleware' => 'auth'], function () {
     // Dashboard
     Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
-    // Naive Bayes
-    Route::group(['prefix' => 'pengujian-naive-bayes', 'as' => 'naive-bayes.'], function () {
-        Route::get('/', 'App\Http\Controllers\NaiveBayesController@index')->name('index');
-    });
     // Training Data
     Route::group(['prefix' => 'data-training', 'as' => 'training-data.'], function () {
         Route::get('/', 'App\Http\Controllers\TrainingDataController@index')->name('index');
@@ -41,8 +37,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::group(['prefix' => 'probabilitas', 'as' => 'probability.'], function () {
         Route::get('/', 'App\Http\Controllers\ProbabilityController@index')->name('index');
     });
-    // Test History
-    Route::group(['prefix' => 'riwayat-pengujian', 'as' => 'test-history.'], function () {
-        Route::get('/', 'App\Http\Controllers\TestHistoryController@index')->name('index');
+    // Naive Bayes
+    Route::group(['prefix' => 'pengujian-naive-bayes', 'as' => 'naive-bayes.'], function () {
+        Route::get('/', 'App\Http\Controllers\NaiveBayesController@index')->name('index');
+        Route::post('/', 'App\Http\Controllers\NaiveBayesController@store')->name('store');
     });
 });

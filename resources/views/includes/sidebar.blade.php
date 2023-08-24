@@ -50,12 +50,6 @@
                     </span>
                     <h4 class="text-section">Data Mining</h4>
                 </li>
-                <li class="nav-item {{ request()->is('pengujian-naive-bayes') ? 'active' : '' }}">
-                    <a href="{{ route('naive-bayes.index') }}">
-                        <i class="far fa-chart-bar"></i>
-                        <p>Pengujian Naive Bayes</p>
-                    </a>
-                </li>
                 <li class="nav-item {{ request()->is('data-training') ? 'active' : '' }}">
                     <a href="{{ route('training-data.index') }}">
                         <i class="fas fa-layer-group"></i>
@@ -64,14 +58,14 @@
                 </li>
                 <li class="nav-item {{ request()->is('probabilitas') ? 'active' : '' }}">
                     <a href="{{ route('probability.index') }}">
-                        <i class="fas fa-layer-group"></i>
+                        <i class="fas fa-th-list"></i>
                         <p>Probabilitas</p>
                     </a>
                 </li>
-                <li class="nav-item {{ request()->is('riwayat-pengujian') ? 'active' : '' }}">
-                    <a href="{{ route('test-history.index') }}">
-                        <i class="fa fa-history"></i>
-                        <p>Riwayat Pengujian</p>
+                <li class="nav-item {{ request()->is('pengujian-naive-bayes') ? 'active' : '' }}">
+                    <a href="{{ route('naive-bayes.index') }}">
+                        <i class="far fa-chart-bar"></i>
+                        <p>Pengujian Naive Bayes</p>
                     </a>
                 </li>
             </ul>
