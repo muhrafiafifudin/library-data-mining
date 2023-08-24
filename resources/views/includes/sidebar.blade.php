@@ -62,6 +62,12 @@
                         <p>Data Training</p>
                     </a>
                 </li>
+                <li class="nav-item {{ request()->is('probabilitas') ? 'active' : '' }}">
+                    <a href="{{ route('probability.index') }}">
+                        <i class="fas fa-layer-group"></i>
+                        <p>Probabilitas</p>
+                    </a>
+                </li>
                 <li class="nav-item {{ request()->is('riwayat-pengujian') ? 'active' : '' }}">
                     <a href="{{ route('test-history.index') }}">
                         <i class="fa fa-history"></i>

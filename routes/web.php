@@ -37,6 +37,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::group(['prefix' => 'data-training', 'as' => 'training-data.'], function () {
         Route::get('/', 'App\Http\Controllers\TrainingDataController@index')->name('index');
     });
+    // Probability
+    Route::group(['prefix' => 'probabilitas', 'as' => 'probability.'], function () {
+        Route::get('/', 'App\Http\Controllers\ProbabilityController@index')->name('index');
+    });
     // Test History
     Route::group(['prefix' => 'riwayat-pengujian', 'as' => 'test-history.'], function () {
         Route::get('/', 'App\Http\Controllers\TestHistoryController@index')->name('index');
