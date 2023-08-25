@@ -41,5 +41,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::group(['prefix' => 'pengujian-naive-bayes', 'as' => 'naive-bayes.'], function () {
         Route::get('/', 'App\Http\Controllers\NaiveBayesController@index')->name('index');
         Route::post('/', 'App\Http\Controllers\NaiveBayesController@store')->name('store');
+        Route::delete('/{probability}', 'App\Http\Controllers\NaiveBayesController@destroy')->name('destroy');
     });
 });

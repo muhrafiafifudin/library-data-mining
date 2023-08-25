@@ -52,7 +52,7 @@
                                                 <div class="modal-header no-bd">
                                                     <h5 class="modal-title">
                                                         <strong>
-                                                            Form Tambah Produk
+                                                            Form Tambah Pengujian Naive Bayes
                                                         </strong>
                                                     </h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -82,7 +82,7 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="title">Judul Buku</label>
-                                                        <select name="title" class="form-control">
+                                                        <select name="title" class="form-control" id="selectTitle">
                                                             <option value="">Pilih Judul Buku</option>
 
                                                             @foreach ($titles as $title)
@@ -92,13 +92,7 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="type">Jenis Buku</label>
-                                                        <select name="type" class="form-control">
-                                                            <option value="">Pilih Jenis Buku</option>
-
-                                                            @foreach ($types as $type)
-                                                                <option value="{{ $type }}">{{ $type }}</option>
-                                                            @endforeach
-                                                        </select>
+                                                        <input type="text" id="bookType" name="type" class="form-control" readonly>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="class">Kelas</label>
@@ -122,14 +116,49 @@
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table id="test-history-table" class="display table table-striped table-hover" >
+                                    <table id="naive-bayes-table" class="display table table-striped table-hover" >
                                         <thead>
                                             <tr>
                                                 <th width="50px">No.</th>
-                                                <th>Pengujian</th>
-                                                <th>Status</th>
+                                                <th>Nama Siswa</th>
+                                                <th>Kode Koleksi</th>
+                                                <th>Judul Buku</th>
+                                                <th>Jenis Buku</th>
+                                                <th>Kelas</th>
+                                                <th>Kelass</th>
+                                                <th>Aksi</th>
                                             </tr>
                                         </thead>
+                                        <tbody>
+                                            @php $no = 1; @endphp
+                                            @foreach ($naive_bayes as $value)
+                                                <tr>
+                                                    <td>{{ $no++ }}</td>
+                                                    <td>{{ $value->name }}</td>
+                                                    <td>{{ $value->code }}</td>
+                                                    <td>{{ $value->title }}</td>
+                                                    <td>{{ $value->type }}</td>
+                                                    <td>{{ $value->class }}</td>
+                                                    <td>{{ $value->class }}</td>
+                                                    <td>
+                                                        <form action="{{ route('naive-bayes.destroy', \Crypt::encrypt($value->id)) }}" method="POST">
+                                                            @csrf
+                                                            @method('DELETE')
+
+                                                            <div class="form-button-action">
+                                                                <a href="#" class="btn btn-link btn-primary">
+                                                                    <i class="fa fa-eye"></i>
+                                                                </a>
+
+                                                                <button type="submit" class="btn btn-link btn-danger">
+                                                                    <i class="fa fa-times"></i>
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
@@ -142,5 +171,5 @@
 @endsection
 
 @push('javascript')
-    <script src="{{ asset('assets/js/pages/test_history.js') }}"></script>
+    <script src="{{ asset('assets/js/pages/naive_bayes.js') }}"></script>
 @endpush
