@@ -65,8 +65,8 @@
                                         </thead>
                                         <tbody>
                                             @php
-                                                $result_a = $filtered_name_probability->name_a_value*$filtered_code_probability->code_a_value*$filtered_title_probability->title_a_value*$filtered_type_probability->type_a_value*$filtered_class_probability->class_a_value;
-                                                $result_b = $filtered_name_probability->name_b_value*$filtered_code_probability->code_b_value*$filtered_title_probability->title_b_value*$filtered_type_probability->type_b_value*$filtered_class_probability->class_b_value;
+                                                $result_a = number_format($filtered_name_probability->name_a_value*$filtered_code_probability->code_a_value*$filtered_title_probability->title_a_value*$filtered_type_probability->type_a_value*$filtered_class_probability->class_a_value, 8);
+                                                $result_b = number_format($filtered_name_probability->name_b_value*$filtered_code_probability->code_b_value*$filtered_title_probability->title_b_value*$filtered_type_probability->type_b_value*$filtered_class_probability->class_b_value, 8);
                                             @endphp
 
                                             <tr>
