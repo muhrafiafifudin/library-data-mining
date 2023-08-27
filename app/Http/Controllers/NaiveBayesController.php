@@ -32,8 +32,8 @@ class NaiveBayesController extends Controller
         // Status Probability
         $probability_count = TrainingData::count();
 
-        $probability_a = TrainingData::where('status', 'Telah Kembali')->count();
-        $probability_b = TrainingData::where('status', 'Belum Kembali')->count();
+        $probability_a = TrainingData::where('status', 'Minat')->count();
+        $probability_b = TrainingData::where('status', 'Tidak Minat')->count();
 
         $probability_a_value = $probability_a / $probability_count;
         $probability_b_value = $probability_b / $probability_count;
@@ -55,8 +55,8 @@ class NaiveBayesController extends Controller
         $name_probability = collect([]);
 
         foreach ($name_distinct as $value) {
-            $name_a = TrainingData::where([['name', $value->name], ['status', 'Telah Kembali']])->count();
-            $name_b = TrainingData::where([['name', $value->name], ['status', 'Belum Kembali']])->count();
+            $name_a = TrainingData::where([['name', $value->name], ['status', 'Minat']])->count();
+            $name_b = TrainingData::where([['name', $value->name], ['status', 'Tidak Minat']])->count();
 
             $name_probability->push((object) [
                 'name' => $value->name,
@@ -81,8 +81,8 @@ class NaiveBayesController extends Controller
         $code_probability = collect([]);
 
         foreach ($code_distinct as $value) {
-            $code_a = TrainingData::where([['code', $value->code], ['status', 'Telah Kembali']])->count();
-            $code_b = TrainingData::where([['code', $value->code], ['status', 'Belum Kembali']])->count();
+            $code_a = TrainingData::where([['code', $value->code], ['status', 'Minat']])->count();
+            $code_b = TrainingData::where([['code', $value->code], ['status', 'Tidak Minat']])->count();
 
             $code_probability->push((object) [
                 'code' => $value->code,
@@ -107,8 +107,8 @@ class NaiveBayesController extends Controller
         $title_probability = collect([]);
 
         foreach ($title_distinct as $value) {
-            $title_a = TrainingData::where([['title', $value->title], ['status', 'Telah Kembali']])->count();
-            $title_b = TrainingData::where([['title', $value->title], ['status', 'Belum Kembali']])->count();
+            $title_a = TrainingData::where([['title', $value->title], ['status', 'Minat']])->count();
+            $title_b = TrainingData::where([['title', $value->title], ['status', 'Tidak Minat']])->count();
 
             $title_probability->push((object) [
                 'title' => $value->title,
@@ -133,8 +133,8 @@ class NaiveBayesController extends Controller
         $type_probability = collect([]);
 
         foreach ($type_distinct as $value) {
-            $type_a = TrainingData::where([['type', $value->type], ['status', 'Telah Kembali']])->count();
-            $type_b = TrainingData::where([['type', $value->type], ['status', 'Belum Kembali']])->count();
+            $type_a = TrainingData::where([['type', $value->type], ['status', 'Minat']])->count();
+            $type_b = TrainingData::where([['type', $value->type], ['status', 'Tidak Minat']])->count();
 
             $type_probability->push((object) [
                 'type' => $value->type,
@@ -159,8 +159,8 @@ class NaiveBayesController extends Controller
         $class_probability = collect([]);
 
         foreach ($class_distinct as $value) {
-            $class_a = TrainingData::where([['class', $value->class], ['status', 'Telah Kembali']])->count();
-            $class_b = TrainingData::where([['class', $value->class], ['status', 'Belum Kembali']])->count();
+            $class_a = TrainingData::where([['class', $value->class], ['status', 'Minat']])->count();
+            $class_b = TrainingData::where([['class', $value->class], ['status', 'Tidak Minat']])->count();
 
             $class_probability->push((object) [
                 'class' => $value->class,
@@ -190,8 +190,8 @@ class NaiveBayesController extends Controller
         // Status Probability
         $probability_count = TrainingData::count();
 
-        $probability_a = TrainingData::where('status', 'Telah Kembali')->count();
-        $probability_b = TrainingData::where('status', 'Belum Kembali')->count();
+        $probability_a = TrainingData::where('status', 'Minat')->count();
+        $probability_b = TrainingData::where('status', 'Tidak Minat')->count();
 
         $probability_a_value = $probability_a / $probability_count;
         $probability_b_value = $probability_b / $probability_count;
@@ -213,8 +213,8 @@ class NaiveBayesController extends Controller
         $name_probability = collect([]);
 
         foreach ($name_distinct as $value) {
-            $name_a = TrainingData::where([['name', $value->name], ['status', 'Telah Kembali']])->count();
-            $name_b = TrainingData::where([['name', $value->name], ['status', 'Belum Kembali']])->count();
+            $name_a = TrainingData::where([['name', $value->name], ['status', 'Minat']])->count();
+            $name_b = TrainingData::where([['name', $value->name], ['status', 'Tidak Minat']])->count();
 
             $name_probability->push((object) [
                 'name' => $value->name,
@@ -239,8 +239,8 @@ class NaiveBayesController extends Controller
         $code_probability = collect([]);
 
         foreach ($code_distinct as $value) {
-            $code_a = TrainingData::where([['code', $value->code], ['status', 'Telah Kembali']])->count();
-            $code_b = TrainingData::where([['code', $value->code], ['status', 'Belum Kembali']])->count();
+            $code_a = TrainingData::where([['code', $value->code], ['status', 'Minat']])->count();
+            $code_b = TrainingData::where([['code', $value->code], ['status', 'Tidak Minat']])->count();
 
             $code_probability->push((object) [
                 'code' => $value->code,
@@ -265,8 +265,8 @@ class NaiveBayesController extends Controller
         $title_probability = collect([]);
 
         foreach ($title_distinct as $value) {
-            $title_a = TrainingData::where([['title', $value->title], ['status', 'Telah Kembali']])->count();
-            $title_b = TrainingData::where([['title', $value->title], ['status', 'Belum Kembali']])->count();
+            $title_a = TrainingData::where([['title', $value->title], ['status', 'Minat']])->count();
+            $title_b = TrainingData::where([['title', $value->title], ['status', 'Tidak Minat']])->count();
 
             $title_probability->push((object) [
                 'title' => $value->title,
@@ -291,8 +291,8 @@ class NaiveBayesController extends Controller
         $type_probability = collect([]);
 
         foreach ($type_distinct as $value) {
-            $type_a = TrainingData::where([['type', $value->type], ['status', 'Telah Kembali']])->count();
-            $type_b = TrainingData::where([['type', $value->type], ['status', 'Belum Kembali']])->count();
+            $type_a = TrainingData::where([['type', $value->type], ['status', 'Minat']])->count();
+            $type_b = TrainingData::where([['type', $value->type], ['status', 'Tidak Minat']])->count();
 
             $type_probability->push((object) [
                 'type' => $value->type,
@@ -317,8 +317,8 @@ class NaiveBayesController extends Controller
         $class_probability = collect([]);
 
         foreach ($class_distinct as $value) {
-            $class_a = TrainingData::where([['class', $value->class], ['status', 'Telah Kembali']])->count();
-            $class_b = TrainingData::where([['class', $value->class], ['status', 'Belum Kembali']])->count();
+            $class_a = TrainingData::where([['class', $value->class], ['status', 'Minat']])->count();
+            $class_b = TrainingData::where([['class', $value->class], ['status', 'Tidak Minat']])->count();
 
             $class_probability->push((object) [
                 'class' => $value->class,
@@ -341,9 +341,9 @@ class NaiveBayesController extends Controller
         $result_b = $filtered_name_probability->name_b_value * $filtered_code_probability->code_b_value * $filtered_title_probability->title_b_value * $filtered_type_probability->type_b_value * $filtered_class_probability->class_b_value;
 
         if ($result_a > $result_b) {
-            $status = 'Telah Kembali';
+            $status = 'Minat';
         } else {
-            $status = 'Belum Kembali';
+            $status = 'Tidak Minat';
         }
 
         $naive_bayes = new NaiveBayes();
