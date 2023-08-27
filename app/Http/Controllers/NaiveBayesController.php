@@ -354,6 +354,8 @@ class NaiveBayesController extends Controller
         $naive_bayes->type = $request->type;
         $naive_bayes->class = $request->class;
         $naive_bayes->status = $status;
+        $naive_bayes->result_a = number_format($result_a, 8, '.');
+        $naive_bayes->result_b = number_format($result_b, 8, '.');
         $naive_bayes->save();
 
         return view('pages.naive_bayes.naive_bayes_detail', compact('filtered_name_probability', 'filtered_code_probability', 'filtered_title_probability', 'filtered_type_probability', 'filtered_class_probability', 'probability', 'naive_bayes'));
@@ -367,9 +369,9 @@ class NaiveBayesController extends Controller
             $naive_bayes = NaiveBayes::findOrFail($id);
             $naive_bayes->delete();
 
-            return redirect()->route('naive_bayes.index')->with(['success' => 'Berhasil Menghapus Data !!']);
+            return redirect()->route('naive-bayes.index')->with(['success' => 'Berhasil Menghapus Data !!']);
         } catch (\Throwable $th) {
-            return redirect()->route('naive_bayes.index')->with(['error' => 'Gagal Menghapus Data !!']);
+            return redirect()->route('naive-bayes.index')->with(['error' => 'Gagal Menghapus Data !!']);
         }
     }
 }

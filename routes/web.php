@@ -44,4 +44,6 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/', 'App\Http\Controllers\NaiveBayesController@store')->name('store');
         Route::delete('/{probability}', 'App\Http\Controllers\NaiveBayesController@destroy')->name('destroy');
     });
+    // Accuracy
+    Route::get('/nilai-akurasi', 'App\Http\Controllers\AccuracyController@index')->name('accuracy.index');
 });
