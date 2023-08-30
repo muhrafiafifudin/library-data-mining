@@ -62,7 +62,7 @@
                                                 <div class="modal-body">
                                                     <div class="form-group">
                                                         <label for="name">Nama Siswa</label>
-                                                        <select name="name" class="form-control">
+                                                        <select name="name" class="form-control" id="selectName">
                                                             <option value="">Pilih Nama Siswa</option>
 
                                                             @foreach ($names as $name)
@@ -71,8 +71,12 @@
                                                         </select>
                                                     </div>
                                                     <div class="form-group">
+                                                        <label for="type">Kelas</label>
+                                                        <input type="text" id="nameClass" name="class" class="form-control" readonly>
+                                                    </div>
+                                                    <div class="form-group">
                                                         <label for="code">Kode Koleksi</label>
-                                                        <select name="code" class="form-control">
+                                                        <select name="code" class="form-control" id="selectCode">
                                                             <option value="">Pilih Kode Koleksi</option>
 
                                                             @foreach ($codes as $code)
@@ -81,28 +85,12 @@
                                                         </select>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="title">Judul Buku</label>
-                                                        <select name="title" class="form-control" id="selectTitle">
-                                                            <option value="">Pilih Judul Buku</option>
-
-                                                            @foreach ($titles as $title)
-                                                                <option value="{{ $title }}">{{ $title }}</option>
-                                                            @endforeach
-                                                        </select>
+                                                        <label for="type">Judul Buku</label>
+                                                        <input type="text" id="bookTitle" name="title" class="form-control" readonly>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="type">Jenis Buku</label>
                                                         <input type="text" id="bookType" name="type" class="form-control" readonly>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="class">Kelas</label>
-                                                        <select name="class" class="form-control">
-                                                            <option value="">Pilih Kelas</option>
-
-                                                            @foreach ($classes as $class)
-                                                                <option value="{{ $class }}">{{ $class }}</option>
-                                                            @endforeach
-                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer no-bd">
