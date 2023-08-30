@@ -40,7 +40,10 @@ Route::group(['middleware' => 'auth'], function () {
     // Naive Bayes
     Route::group(['prefix' => 'pengujian-naive-bayes', 'as' => 'naive-bayes.'], function () {
         Route::get('/', 'App\Http\Controllers\NaiveBayesController@index')->name('index');
+        Route::get('/{naiveBayes}', 'App\Http\Controllers\NaiveBayesController@show')->name('show');
         Route::post('/', 'App\Http\Controllers\NaiveBayesController@store')->name('store');
         Route::delete('/{probability}', 'App\Http\Controllers\NaiveBayesController@destroy')->name('destroy');
     });
+    // Accuracy
+    Route::get('/nilai-akurasi', 'App\Http\Controllers\AccuracyController@index')->name('accuracy.index');
 });

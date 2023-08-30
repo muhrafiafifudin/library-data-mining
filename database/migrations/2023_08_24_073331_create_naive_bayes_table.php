@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('type');
             $table->string('class');
             $table->string('status');
+            $table->string('result_a');
+            $table->string('result_b');
             $table->timestamps();
         });
     }

@@ -46,6 +46,12 @@
                         <p>Pengujian Naive Bayes</p>
                     </a>
                 </li>
+                <li class="nav-item {{ request()->is('nilai-akurasi') ? 'active' : '' }}">
+                    <a href="{{ route('accuracy.index') }}">
+                        <i class="fas fa-file-signature"></i>
+                        <p>Nilai Akurasi</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

@@ -48,10 +48,10 @@
                                                 <th colspan="2">Nilai Probabilitas</th>
                                             </tr>
                                             <tr>
-                                                <th>Telah Kembali</th>
-                                                <th>Belum Kembali</th>
-                                                <th>Telah Kembali</th>
-                                                <th>Belum Kembali</th>
+                                                <th>Minat</th>
+                                                <th>Tidak Minat</th>
+                                                <th>Minat</th>
+                                                <th>Tidak Minat</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -85,10 +85,10 @@
                                                 <th colspan="2">Nilai Probabilitas</th>
                                             </tr>
                                             <tr>
-                                                <th>Telah Kembali</th>
-                                                <th>Belum Kembali</th>
-                                                <th>Telah Kembali</th>
-                                                <th>Belum Kembali</th>
+                                                <th>Minat</th>
+                                                <th>Tidak Minat</th>
+                                                <th>Minat</th>
+                                                <th>Tidak Minat</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -124,10 +124,10 @@
                                                 <th colspan="2">Nilai Probabilitas</th>
                                             </tr>
                                             <tr>
-                                                <th>Telah Kembali</th>
-                                                <th>Belum Kembali</th>
-                                                <th>Telah Kembali</th>
-                                                <th>Belum Kembali</th>
+                                                <th>Minat</th>
+                                                <th>Tidak Minat</th>
+                                                <th>Minat</th>
+                                                <th>Tidak Minat</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -163,10 +163,10 @@
                                                 <th colspan="2">Nilai Probabilitas</th>
                                             </tr>
                                             <tr>
-                                                <th>Telah Kembali</th>
-                                                <th>Belum Kembali</th>
-                                                <th>Telah Kembali</th>
-                                                <th>Belum Kembali</th>
+                                                <th>Minat</th>
+                                                <th>Tidak Minat</th>
+                                                <th>Minat</th>
+                                                <th>Tidak Minat</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -202,10 +202,10 @@
                                                 <th colspan="2">Nilai Probabilitas</th>
                                             </tr>
                                             <tr>
-                                                <th>Telah Kembali</th>
-                                                <th>Belum Kembali</th>
-                                                <th>Telah Kembali</th>
-                                                <th>Belum Kembali</th>
+                                                <th>Minat</th>
+                                                <th>Tidak Minat</th>
+                                                <th>Minat</th>
+                                                <th>Tidak Minat</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -241,10 +241,10 @@
                                                 <th colspan="2">Nilai Probabilitas</th>
                                             </tr>
                                             <tr>
-                                                <th>Telah Kembali</th>
-                                                <th>Belum Kembali</th>
-                                                <th>Telah Kembali</th>
-                                                <th>Belum Kembali</th>
+                                                <th>Minat</th>
+                                                <th>Tidak Minat</th>
+                                                <th>Minat</th>
+                                                <th>Tidak Minat</th>
                                             </tr>
                                         </thead>
                                         <tbody>

@@ -51,22 +51,22 @@
                                                 <th colspan="2">Kelas ( {{ $filtered_class_probability->class }} )</th>
                                             </tr>
                                             <tr>
-                                                <th>Telah Kembali</th>
-                                                <th>Belum Kembali</th>
-                                                <th>Telah Kembali</th>
-                                                <th>Belum Kembali</th>
-                                                <th>Telah Kembali</th>
-                                                <th>Belum Kembali</th>
-                                                <th>Telah Kembali</th>
-                                                <th>Belum Kembali</th>
-                                                <th>Telah Kembali</th>
-                                                <th>Belum Kembali</th>
+                                                <th>Minat</th>
+                                                <th>Tidak Minat</th>
+                                                <th>Minat</th>
+                                                <th>Tidak Minat</th>
+                                                <th>Minat</th>
+                                                <th>Tidak Minat</th>
+                                                <th>Minat</th>
+                                                <th>Tidak Minat</th>
+                                                <th>Minat</th>
+                                                <th>Tidak Minat</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             @php
-                                                $result_a = $filtered_name_probability->name_a_value*$filtered_code_probability->code_a_value*$filtered_title_probability->title_a_value*$filtered_type_probability->type_a_value*$filtered_class_probability->class_a_value;
-                                                $result_b = $filtered_name_probability->name_b_value*$filtered_code_probability->code_b_value*$filtered_title_probability->title_b_value*$filtered_type_probability->type_b_value*$filtered_class_probability->class_b_value;
+                                                $result_a = number_format($filtered_name_probability->name_a_value*$filtered_code_probability->code_a_value*$filtered_title_probability->title_a_value*$filtered_type_probability->type_a_value*$filtered_class_probability->class_a_value, 8);
+                                                $result_b = number_format($filtered_name_probability->name_b_value*$filtered_code_probability->code_b_value*$filtered_title_probability->title_b_value*$filtered_type_probability->type_b_value*$filtered_class_probability->class_b_value, 8);
                                             @endphp
 
                                             <tr>
@@ -83,11 +83,11 @@
                                                 <td>{{ $filtered_class_probability->class_b_value }}</td>
                                             </tr>
                                             <tr>
-                                                <td>Telah Kembali</td>
+                                                <td>Minat</td>
                                                 <td colspan="10">{{ $filtered_name_probability->name_a_value . ' * ' . $filtered_code_probability->code_a_value . ' * ' . $filtered_title_probability->title_a_value . ' * ' . $filtered_type_probability->type_a_value . ' * ' . $filtered_class_probability->class_a_value . ' = ' }}<strong>{{ $result_a }}</strong></td>
                                             </tr>
                                             <tr>
-                                                <td>Belum Kembali</td>
+                                                <td>Tidak Minat</td>
                                                 <td colspan="10">{{ $filtered_name_probability->name_b_value . ' * ' . $filtered_code_probability->code_b_value . ' * ' . $filtered_title_probability->title_b_value . ' * ' . $filtered_type_probability->type_b_value . ' * ' . $filtered_class_probability->class_b_value . ' = ' }}<strong>{{ $result_b }}</strong></td>
                                             </tr>
                                         </tbody>

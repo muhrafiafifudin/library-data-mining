@@ -146,7 +146,7 @@
                                                             @method('DELETE')
 
                                                             <div class="form-button-action">
-                                                                <a href="#" class="btn btn-link btn-primary">
+                                                                <a href="{{ route('naive-bayes.show', \Crypt::encrypt($value->id)) }}" class="btn btn-link btn-primary">
                                                                     <i class="fa fa-eye"></i>
                                                                 </a>
 
