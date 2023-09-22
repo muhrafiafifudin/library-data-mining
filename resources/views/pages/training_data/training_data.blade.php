@@ -36,10 +36,10 @@
                             <div class="card-header">
                                 <div class="d-flex align-items-center">
                                     <h4 class="card-title">Data Training</h4>
-                                    {{-- <button class="btn btn-secondary btn-round ml-auto" data-toggle="modal" data-target="#addProduct">
+                                    <button class="btn btn-secondary btn-round ml-auto" data-toggle="modal" data-target="#addProduct">
                                         <i class="fa fa-plus mr-2"></i>
                                         Tambah Data Training
-                                    </button> --}}
+                                    </button>
                                 </div>
 
                                 <div class="modal fade" id="addProduct" tabindex="-1" role="dialog" aria-hidden="true">
@@ -61,28 +61,28 @@
                                                 </div>
                                                 <div class="modal-body">
                                                     <div class="form-group">
-                                                        <label for="variable">Variabel</label>
+                                                        <label for="variable">Nama Anggota</label>
                                                         <input type="text" class="form-control" name="variable" placeholder="Masukkan Variabel">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="criteria">Kode</label>
+                                                        <label for="criteria">Kode Koleksi</label>
                                                         <input type="text" class="form-control" name="code" placeholder="Masukkan Kode">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="criteria">Produk</label>
+                                                        <label for="criteria">Judul</label>
                                                         <input type="text" class="form-control" name="product" placeholder="Masukkan Produk">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="criteria">Harga</label>
-                                                        <input type="number" class="form-control" name="price" placeholder="Masukkan Harga">
+                                                        <label for="criteria">Jenis Buku</label>
+                                                        <input type="text" class="form-control" name="price" placeholder="Masukkan Harga">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="criteria">Tanggal Kadaluarsa</label>
-                                                        <input type="date" class="form-control" name="exp_date" placeholder="Masukkan Tanggal Kadaluarsa">
+                                                        <label for="criteria">Kelas</label>
+                                                        <input type="text" class="form-control" name="stock" placeholder="Masukkan Stok">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="criteria">Stok</label>
-                                                        <input type="number" class="form-control" name="stock" placeholder="Masukkan Stok">
+                                                        <label for="criteria">Status</label>
+                                                        <input type="text" class="form-control" name="stock" placeholder="Masukkan Stok">
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer no-bd">
